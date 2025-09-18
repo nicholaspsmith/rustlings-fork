@@ -1,9 +1,12 @@
 // TODO: Fix the compiler error on this function.
 fn picky_eater(food: &str) -> &str {
+    let disliked_foods = ["broccoli", "gummy bears", "literally anything"];
     if food == "strawberry" {
         "Yummy!"
+    } else if disliked_foods.contains(&food) {
+        "No thanks!"
     } else {
-        1
+        "I guess I can eat that."
     }
 }
 
